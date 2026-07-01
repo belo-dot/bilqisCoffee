@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Order | Bilqis Coffee</title>
+  <link rel="stylesheet" href="styleCof.css">
+</head>
+<body>
+ 
+  <!-- NAVBAR — exact same as your other pages -->
+  <nav class="navbar">
+    <img class="logo" src="photos/Screenshot_2026-06-14_at_4.31.45_PM-removebg-preview.png" alt="Coffee Logo Image">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+ 
+  <!-- PAGE HEADER — same style as your menu-header -->
+  <section class="menu-header">
+    <h1>Place Your Order</h1>
+    <p class="breadcrumb">
+      <a href="index.html">Home</a> &gt;
+      <a href="menu.html">Menu</a> &gt;
+      Order
+    </p>
+  </section>
+ 
+  <!-- ORDER SECTION -->
+  <section class="order-section">
+ 
+    <!-- LEFT: Product Card -->
+    <div class="order-product-card">
+      <div id="product-not-found" style="display:none;">
+        <p>Product not found. <a href="menu.html">Go back to the menu.</a></p>
+      </div>
+      <img id="product-image" src="" alt="Product" class="order-product-img" />
+      <h2 id="product-name"></h2>
+      <p id="product-category"></p>
+    </div>
+ 
+    <!-- RIGHT: Order Form -->
+    <div class="order-form">
+ 
+      
+ 
+      <div class="order-field">
+        <label for="size-select">Size</label>
+        <select id="size-select">
+          <!-- filled by order.js -->
+        </select>
+      </div>
+ 
+      <div class="order-field">
+        <label>Quantity</label>
+        <div class="qty-control">
+          <button type="button" id="qty-minus">−</button>
+          <input type="number" id="quantity" value="1" min="1" max="20" readonly />
+          <button type="button" id="qty-plus">+</button>
+        </div>
+      </div>
+ 
+      <div class="order-summary-box">
+        <div class="order-summary-row">
+          <span>Unit Price</span>
+          <span id="unit-price">$0.00</span>
+        </div>
+        <div class="order-summary-row order-summary-total">
+          <span>Total</span>
+          <span id="total-price">$0.00</span>
+        </div>
+      </div>
+ 
+      <button type="button" id="confirm-btn" class="order-btn">Confirm Order</button>
+ 
+      <div id="order-success" style="display:none;" class="order-feedback-success">
+        ✔ Your order has been placed! We'll have it ready for you soon.
+      </div>
+      <div id="order-error" style="display:none;" class="order-feedback-error">
+        Something went wrong. Please try again.
+      </div>
+ 
+    </div>
+  </section>
+ 
+  <!-- FOOTER — exact same as your other pages -->
+  <footer>
+    <div class="footer-main">
+      <div class="footer-logo">
+        <img src="photos/Screenshot_2026-06-14_at_4.31.45_PM-removebg-preview.png" alt="Bilqis Logo">
+      </div>
+      <div class="footer-col">
+        <h4>Opening Hours</h4>
+        <p>Sunday - Thursday</p>
+        <p>8:00am - 11:00pm</p>
+        <p>Friday - Saturday</p>
+        <p>8:00am to 12:00am</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>Store: +9292922033</p>
+        <p>Email: info@bilqiscoffee.co</p>
+      </div>
+      <div class="footer-col">
+        <h4>Address</h4>
+        <p>8018 5th Ave, Brooklyn, New York</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright © 2025 - Bilqis Coffee</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+  </footer>
+ 
+  <script type="module" src="order.js"></script>
+ 
+</body>
+</html>
